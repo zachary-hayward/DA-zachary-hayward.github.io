@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="home">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Learning Journey</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="stylesheet" href="../styles/dryden.css">
+  <script src="../config.js"></script>
+</head>
+  <body>
+    <header>
+      <div class="title-container">
+        <div class="image-circle">
+          <img src="../images/book.jpg" alt="bookimg" class="book-image">
+        </div>
+        <h1 id="blog-title"></h1>
+      </div>
+      <nav class="header-links">
+        <a href="../index.html#top">Home</a>
+        <a href="#">About Me</a>
+        <a href="#">Latest</a>
+      </nav>
+    </header>
+    <div class="blog-content">
+      <div class="blog-title">
+      <h1>What are the best practices associated with using classes vs. ids?</h2>
+      <h4>1 April 2024</h3>
+      </div>
+      <p>
+      Classes and ID's are both used in HTML to link to specific formatting in your CSS file.
+      These can include alignment, fonts, colouring, sizing etc.
+      However classes are generally used for things that you will have in multiple places on your webpage.
+      Such as:
+      <ul>
+        <li>Sub Headings</li>
+        <li>Paragraphs you want formattted the same/similar</li>
+      </ul>
+      <p>These classes can let your webpages more easily adapt to things like smaller screens and display alterations for different viewers.</p>
+      <p>This is thanks to the fact you can setup one bit of code to alter the class when screen size is different. And it will be applied to all those subheadings or paragraphs.</p>
+      <br>
+      <p>You might use IDs for things like your webpages header that includes your title, logo, etc.</p>
+      <p>These elements are 'unique' on your webpage. They are displayed in one place with one specific format/style.</p>
+      <p>I'm still not 100% sure what I want my title to be. So I used an ID to pull in my title name from a script variable.</p>
+      <p>
+        <pre>
+          &lt;header&gt;
+            &lt;div class="title-container"&gt;
+              &lt;div class="image-circle"&gt;
+                &lt;img src="images/book.jpg" alt="bookimg" class="book-image"&gt;
+              &lt;/div&gt;
+              &lt;h1 id="blog-title"&gt;&lt;/h1&gt;
+              &lt;nav class="header-links"&gt;
+                &lt;a href="#top">Home&lt;/a&gt;
+                &lt;a href="#">About Me&lt;/a&gt;
+                &lt;a href="#">Latest&lt;/a&gt;
+              &lt;/nav&gt;
+            &lt;/div&gt;
+          &lt;/header&gt;
+
+          &lt;script&gt;
+            document.getElementById("blog-title").innerText = blogTitle; 
+          &lt;/script&gt;
+        </pre>
+        <p>That id="blog-title" is a unique element which my script can fill in with the variable "blogTitle" from my config.js file:
+          <pre>
+          var blogTitle = "My Learning Journey";
+          </pre>
+        </p>
+      </p>
+      <p>
+        Both ID's and classes should be descriptive so you can easily remember what they do. This is especially important for classes where you want to use it repeatedly throughout your webpage for font coloring, font selection etc.
+      </p>
+    </div>
+  </body>
+  <script> document.getElementById("blog-title").innerText = blogTitle; </script>
+</html>

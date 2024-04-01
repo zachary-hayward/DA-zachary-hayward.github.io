@@ -70,13 +70,29 @@ header {
 }
 
 .blog-list {
-    margin-left: 20px;
     text-align: center;
 }
 
 .blog-preview {
     width: 100%;
     text-align: left;
+    border-top: 2px solid #000000; 
+    padding-top: 20px; 
+}
+
+.blog-preview a {
+    text-decoration: none;
+    color: inherit; 
+    font-size: inherit; 
+    font-weight: bold; 
+  }
+
+.blog-title {
+  text-align: center;
+}
+
+.blog-content {
+  text-align: left;
 }
 
 /* Media Queries */
