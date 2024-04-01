@@ -1,10 +1,60 @@
-<html>
-  <head>
-    <title>My blog</title>
-  </head>
+<!DOCTYPE html>
+<html lang="en">
+<head id="home">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Learning Journey</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <script src="config.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+</head>
   <body>
-    <h1>Kia ora Taiao! (Hello World!)</h1>
-    <p>This is the beginning of my website home page.</p>
-    <p>It will eventually contain a list of links to all my blogs.</p>
+    <div id="top"></div>
+    <header>
+      <div class="title-container">
+        <div class="image-circle">
+          <img src="images/book.jpg" alt="bookimg" class="book-image">
+        </div>
+        <h1 id="blog-title"></h1>
+      </div>
+      <nav class="header-links">
+        <a href="#top">Home</a>
+        <a href="#">About Me</a>
+        <a href="#">Latest</a>
+      </nav>
+    </header>
+    <div class="content">
+      <div class="left-column">
+        <h2>My Latest Update</h2>
+        <p>Still figuring out how to automatically link my latest post here :D</p>
+      </div>
+      <div class="right-column">
+        <h2>About Me</h2>
+        <p>
+          <ul>
+            <li>In my 30's</li>
+            <li>Married to a US citizen</li>
+            <li>Living in the Cayman Islands</li>
+            <li>7 siblings back in NZ</li>
+            <li>22 and counting nieces / nephews</li>
+            <li>Play Gaelic Football</li>
+            <li>Enjoy Pickleball</li>
+            <li>Slowly sussing out beach volleyball</li>
+            <li>Love technology</li>
+            <li><a href="dryden.html">Love my pooch</a></li>
+          </ul>
+        </p>
+      </div>
+    </div>
+    <div class="blog-list">
+      <h2>My Learning Journey</h2>
+      <p></p>
+      <div class="blog-preview">
+        <h2>Te Houtaewa</h2>
+        <p>Summary of the blog post content...</p>
+        <a href="blog/te-houtaewa-template.html">Read More</a>
+      </div>
+    </div>
   </body>
+  <script> document.getElementById("blog-title").innerText = blogTitle; </script>
 </html>
