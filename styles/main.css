@@ -26,6 +26,7 @@ header {
     height: 70px;
     overflow: hidden;
     margin-top: 0;
+    margin-right: 20px;
 }
 
 .image-circle img {
@@ -34,21 +35,9 @@ header {
     border-radius: 30px;
 }
 
-.dryden-image {
-    max-width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 10px auto; 
-    max-height: 400px;
-}
-
 .title-container {
     display: flex;
     align-items: center;
-}
-
-#blog-title {
-    margin-left: 20px;
 }
 
 .header-links {
@@ -60,7 +49,7 @@ header {
     text-decoration: none;
     margin-right: 20px;
 }
-.content {
+.columns {
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -82,6 +71,7 @@ header {
 
 .blog-list {
     margin-left: 20px;
+    text-align: center;
 }
 
 .blog-preview {
