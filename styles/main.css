@@ -74,10 +74,12 @@ header {
 }
 
 .blog-preview {
-    width: 100%;
+    width: 100%-40px;
     text-align: left;
     border-top: 2px solid #000000; 
     padding-top: 20px; 
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .blog-preview a {
