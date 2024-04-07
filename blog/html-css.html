@@ -24,49 +24,49 @@
       </nav>
     </header>
     <div class="blog-content">
-      <div class="blog-title">
-      <h1>What are the best practices associated with using classes vs. ids?</h2>
-      <h4>1 April 2024</h3>
-      </div>
-      <p>
-      Classes and ID's are both used in HTML to link to specific formatting in your CSS file.
-      These can include alignment, fonts, colouring, sizing etc.
-      However classes are generally used for things that you will have in multiple places on your webpage.
-      Such as:
-      <ul>
-        <li>Sub Headings</li>
-        <li>Paragraphs you want formattted the same/similar</li>
-      </ul>
-      <p>These classes can let your webpages more easily adapt to things like smaller screens and display alterations for different viewers.</p>
-      <p>This is thanks to the fact you can setup one bit of code to alter the class when screen size is different. And it will be applied to all those subheadings or paragraphs.</p>
-      <br>
-      <p>You might use IDs for things like your webpages header that includes your title, logo, etc.</p>
-      <p>These elements are 'unique' on your webpage. They are displayed in one place with one specific format/style.</p>
-      <p>I'm still not 100% sure what I want my title to be. So I used an ID to pull in my title name from a script variable.</p>
-      <p>
-        <pre>
-          &lt;header&gt;
-            &lt;div class="title-container"&gt;
-              &lt;div class="image-circle"&gt;
-                &lt;img src="images/book.jpg" alt="bookimg" class="book-image"&gt;
-              &lt;/div&gt;
-              &lt;h1 id="blog-title"&gt;&lt;/h1&gt;
-              &lt;nav class="header-links"&gt;
-                &lt;a href="#top">Home&lt;/a&gt;
-                &lt;a href="#">About Me&lt;/a&gt;
-                &lt;a href="#">Latest&lt;/a&gt;
-              &lt;/nav&gt;
-            &lt;/div&gt;
-          &lt;/header&gt;
+      <div class="blog-content-new-topic">
+        <div class="blog-title">
+          <h2>Classes Vs. Ids - Best Practices</h2>
+        </div>
+        <p>
+          Classes and ID's are both used in HTML to link to specific formatting in your CSS file.
+          These can include alignment, fonts, colouring, sizing etc.
+          <br>However, classes are generally used for things that you will have in multiple places on your webpage.
+          <br>Such as:
+          <ul>
+            <li>Sub Headings</li>
+            <li>Paragraphs you want formattted the same/similar</li>
+          </ul>
+          An example from my pages would be:
+<div class="code-example"><code>&lt;div class="blog-preview"&gt;
+  &lt;h3&gt;&lt;a href="blog/javascript-dom.html">What I learnt this week! - 7 April 2024&lt;/a&gt;&lt;/h3&gt;
+  &lt;p&gt;Looking at JS, control flows, loops, the "DOM", arrays, objects, and functions.&lt;/p&gt;
+&lt;/div&gt;
+</code></div>  </p>
+        This class="blog-preview" lets me do similar formatting to all my blog previews on my home page.
+        <br>It links to my .css file where I have:
+<div class="code-example"><code>.blog-preview {
+  width: 100%-40px;
+  text-align: left;
+  border-top: 2px solid #000000; 
+  padding-top: 20px; 
+  margin-left: 20px;
+  margin-right: 20px;
+}</code></div>
+        This allows me to format all my blog-previews in one place in my files, and its then applied to multiple places on the webpage.
+        <p>These classes can let your webpages more easily adapt to things like smaller screens and display alterations for different viewers.
+          <br>This is thanks to the fact you can setup one bit of code to alter the class when screen size is different. And it will be applied to all those subheadings or paragraphs.
+          <br>You might use IDs for things like your webpages header that includes your title, logo, etc.
+          <br>These elements are 'unique' on your webpage. They are displayed in one place with one specific format/style.
+          <br>I'm still not 100% sure what I want my title to be. So I used an ID to pull in my title name from a script variable.
+        </p>
+<div class="code-example"><code>&lt;h1 id="blog-title"&gt;&lt;/h1&gt;
 
-          &lt;script&gt;
-            document.getElementById("blog-title").innerText = blogTitle; 
-          &lt;/script&gt;
-        </pre>
+&lt;script&gt;
+  document.getElementById("blog-title").innerText = blogTitle; 
+&lt;/script&gt;</code></div>
         <p>That id="blog-title" is a unique element which my script can fill in with the variable "blogTitle" from my config.js file:
-          <pre>
-          var blogTitle = "My Learning Journey";
-          </pre>
+<div class="code-example"><code>let blogTitle = "My Learning Journey";</code></div>
         </p>
       </p>
       <p>

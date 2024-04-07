@@ -1,2 +1,2 @@
 // config.js
-var blogTitle = "My Learning Journey";
+let blogTitle = "My Learning Journey";
