@@ -25,13 +25,127 @@
       </nav>
     </header> 
     <div class="blog-content">
-        <div class="blog-title">
-          <h2>What I learnt this week!</h2>
-        </div>
-        <div>
-          <h3>JavaScript in Relation to HTML and CSS</h3>
-          <p>HTML is like the actor in a movie. Before anything happens, they are just there, themselves, not doing a whole lot. CSS is like the set, the props, the costumes, all the things that give the scene some presentation. JavaScript is what makes everything happen after the director calls action.</p>
-        </div>
+      <div class="blog-title">
+        <h2>What I learnt this week!</h2>
+      </div>
+      <div class="blog-content-new-topic">
+        <h3>JavaScript in Relation to HTML and CSS</h3>
+        <p>HTML is like the actor in a movie. Before anything happens, they are just there, themselves, not doing a whole lot. CSS is like the set, the props, the costumes, all the things that give the scene some presentation. JavaScript is what makes everything happen after the director calls action.</p>
+      </div>
+      <div class="blog-content-new-topic">
+        <h3>Control Flow, Loops</h3>
+        <p>Control flow is the order that things are processed/executed.
+        <br>Think, driving your car. First you unlock it. Open the door. Get in. Close the door. Start the car. Drive away.</p>
+        <p>But maybe the car wasn't locked?
+        <br>Then the control flow would be 'if car-is-locked then unlock-car'. Then it would move on.
+        <br>This alteration to the control flow with a 'if' statement is very common in everyday life and JavaScript. We don't love when we try to unlock an unlocked car, same as we don't want a device to process information that doesn't need to be processed or we don't want processed. Like if the wrong password was used, we don't want them to be able to login anyway.
+        <br>In JavaScript it might look something like this:
+<div class="code-example"><code>if (carIsLocked) {
+   unlockCar()
+}</code></div>
+        </p>
+        <p>Loops can be a couple of different things. First are when something gets repeated until some parameter is met. Think about combing/brushing hair. You repeat the action over and over until the 'parameter' of having tidy hair is met. Or you might do up a button, then move on to the next button, so on, so forth until all your buttons are done up.
+        <br>In JavaScript it might look like this:
+<div class="code-example"><code>for (let i=0; i < 10; i++) {
+    brushHair()
+}</code></div>
+        This loop would start with a variable i equal to 0.
+        <br>It would check if i <code><</code> 10.
+        <br>If it is then it would do whats inside the {} brackets.
+        <br>Then it adds 1 to i. So i is now 1.
+        <br>Then it repeats by checking if i <code><</code> 10.
+        </p>
+        <p>The second way loops can be used would be to do something to a list of things. Say you walk into a room, theres five people it, you might go around the room and say hey, give a head nod or highfive to each person.</p>
+<div class="code-example"><code>for (let person of listOfPeople) {
+    highFive(person)
+}</code></div>
+        <p>This will go through the list of people in the array listOfPeople and do whatever highFive() is to each person in the array.
+        <br>This type of for loop is useful when listOfPeople is an array, not an object. Which I'll explain later on.
+        </p>
+      </div>
+      <div class="blog-content-new-topic">
+        <h3>What is the DOM?</h3>
+        <p>The DOM is what your browser creates, based of the HTML document that is the basis of a webpage.
+        <br>Your browser looks at the HTML document, and builds the DOM in a tree like structure.
+        <br>Heres an example of part my blogs home pages HTML document.
+        <div class="code-example"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  &lt;head id="home"&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title>My Learning Journey&lt;/title&gt;
+    &lt;link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans"&gt;
+    &lt;link rel="stylesheet" href="styles/main.css"&gt;
+    &lt;script src="config.js"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></div>
+        As a most basic explanation, it would start the trunk of the tree at &lt;html&gt;.
+        <br>Then at &lt;head&gt; there would be a branch. Everything until &lt;/head&gt; would be on that branch.
+        <br>Then &lt;body&gt; would be a new branch that finishes when we reach &lt;/body&gt;.
+        <br>If you notice &lt;head&gt; has an 'id' called "home". This is a unique identifier for the &lt;head&gt; 'branch'.
+        <br>If you wanted to do something with the &lt;head&gt; you could use that "home" id to find the branch and interact with it in your JavaScript file.
+        <br>On my home page I've used it so that I can add a clickable 'Home' button on my blogs that take me back to the 'home' id on my main page and orient the users view to the top of the page.</p>
+        <p>You could do just about anything you can imagine to your webpage. When a browser builds the DOM from the HTML document and styles it with the CSS document it can use a whole range of languages to interact with the DOM. The DOM is quite universal, JavaScript, Python, Java, etc. can interact with the DOM.
+
+        </p>
+      </div>
+      <div class="blog-content-new-topic">
+        <h3>Arrays Vs. Objects</h3>
+        <p>Arrays and objects are both special kinds of 'variables'.
+        <br>Arrays have information in them in a structured order. Each 'thing' in an array is called an 'element' of that array.
+        <br>Heres an example of an array you might use:
+<div class="code-example"><code>let listOfPeople = ['Jackson', 'David', 'Kate', 'Jess']</code></div>
+        listOfPeople is now an array with those names stored as elements in it.
+        <br>'Jackson' is considered the 0 element, 'David' the 1 element, so on so forth.
+        <br>In your scripts, if you used listOfPeople[0] your script would process that as 'Jackson'.
+        <br>We should also look at the earlier example:
+<div class="code-example"><code>for (let person of listOfPeople) {
+    highFive(person)
+}</code></div>
+        This would 'loop' through the array 'listOfPeople' from element 0 to element 3. On each loop the function 'highFive' is called. The first time with the variable 'person' equal to 'Jackson', then on the second loop 'person' equals 'David', then 'Kate', then 'Jess'.    
+        </p>
+        <p>Objects are similar except they arn't 'ordered elements' they have whats called 'key-value' pairs.
+        <br>These are more useful for things that need additional information. Heres an example:
+<div class="code-example"><code>let family = {
+    jackson: {
+        age: 15,
+        'birth-month': 'august'
+    },
+    david: {
+        age: 12,
+        'birth-month': 'february'
+    },
+    kate: {
+        age: 18,
+        'birth-month': 'september'
+    },
+    jess: {
+        age: 15,
+        'birth-month': 'august'
+    },
+}</code></div>
+        This makes the object 'family' which contains the keys jackson, david, kate, and jess.
+        <br>Each of these keys have values that are actually also objects!
+        <br>Each of the family members has a key 'age' with a value which is their age and a key 'birth-month' with the value that is their birth month.
+        <br>To use the information stored in objects we would do something like:
+        <div class="code-example"><code>family.jackson.age</code></div>
+        Your JavaScript would interpret that 'variable' as 15.
+        </p>
+        <p>So arrays are great for ordered lists of information, and objects are great for storing information with multiple 'attributes' like age and birth month.
+        <br>While they are kind of similar, their uses differ, and how you use the information in them differs aswell.
+        </p>
+      </div>
+      <div class="blog-content-new-topic">
+        <h3>What are functions?</h3>
+        <p>Functions are a piece of code that can have just about anything in.
+        <br>You can 'feed' 'parameters' to functions like this:
+<div class="code-example"><code>function nameYourFunctionHere(parameterOne, parameterTwo) {
+    Your function executes code in here, you can use parameterOne and parameterTwo aswell!
+}</code></div>    
+        </p>
+      </div>
     </div>
   </body>
   <script> document.getElementById("blog-title").innerText = blogTitle; </script>
