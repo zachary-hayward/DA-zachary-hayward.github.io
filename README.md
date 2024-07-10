@@ -1,6 +1,6 @@
 # Intial Toying with HTML CSS
 
-This required us to setup a github pages where we would add blog posts as we were initially learning some website basics.
+This required us to setup a github pages where we would add blog posts as we were initially learning some website basics and some good soft skills practices.
 
 ## Skills
 - [ ] Basic understanding of websites in terms of html and css.
